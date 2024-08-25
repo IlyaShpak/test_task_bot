@@ -15,7 +15,7 @@ class BotSettings(BaseSettings):
     bot_token: str
 
 
-my_bot_settings = BotSettings(_env_file=".env")
+my_bot_settings = BotSettings()
 
 client = openai.OpenAI(api_key=my_bot_settings.api_token)
 
